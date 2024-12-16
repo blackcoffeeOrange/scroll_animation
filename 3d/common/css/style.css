@@ -1,0 +1,1132 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --black: #141414;
+  --white: #ffffff;
+  --gray: #707070;
+  --svg_white: invert(100%) sepia(0%) saturate(7496%) hue-rotate(159deg)
+    brightness(102%) contrast(102%);
+  --font_ja: "yu-gothic-pr6n";
+  --font_en: "Barlow";
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--font_en), "Segoe UI", var(--font_ja), Meiryo, メイリオ,
+    sans-serif;
+  font-size: 16px;
+  position: relative;
+  transition: background-color 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--black);
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--black);
+  }
+
+  a:focus,
+  a:focus-within {
+    outline: 1px solid var(--gray);
+  }
+}
+
+img {
+  display: block;
+}
+
+ul,
+li {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+input,
+textarea {
+  color: var(--white);
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-family: var(--font_ja);
+}
+
+/* ------------
+
+font
+
+英字 Barlow
+日本語  yu-gothic-pr6n
+
+
+--------------*/
+
+/* -----------
+
+
+keyframes
+
+
+--------------*/
+
+.js_glitch {
+  /* color: white; */
+  /* font-size: 100px; */
+  position: relative;
+  /* width: 400px; */
+  margin: 0 auto;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(30px, 9999px, 33px, 0);
+  }
+  5% {
+    clip: rect(3px, 9999px, 41px, 0);
+  }
+  10% {
+    clip: rect(61px, 9999px, 82px, 0);
+  }
+  15% {
+    clip: rect(27px, 9999px, 44px, 0);
+  }
+  20% {
+    clip: rect(82px, 9999px, 96px, 0);
+  }
+  25% {
+    clip: rect(3px, 9999px, 35px, 0);
+  }
+  30% {
+    clip: rect(15px, 9999px, 97px, 0);
+  }
+  35% {
+    clip: rect(50px, 9999px, 60px, 0);
+  }
+  40% {
+    clip: rect(43px, 9999px, 35px, 0);
+  }
+  45% {
+    clip: rect(92px, 9999px, 41px, 0);
+  }
+  50% {
+    clip: rect(80px, 9999px, 52px, 0);
+  }
+  55% {
+    clip: rect(77px, 9999px, 90px, 0);
+  }
+  60% {
+    clip: rect(45px, 9999px, 80px, 0);
+  }
+  65% {
+    clip: rect(88px, 9999px, 74px, 0);
+  }
+  70% {
+    clip: rect(88px, 9999px, 76px, 0);
+  }
+  75% {
+    clip: rect(54px, 9999px, 98px, 0);
+  }
+  80% {
+    clip: rect(43px, 9999px, 5px, 0);
+  }
+  85% {
+    clip: rect(90px, 9999px, 6px, 0);
+  }
+  90% {
+    clip: rect(100px, 9999px, 36px, 0);
+  }
+  95% {
+    clip: rect(69px, 9999px, 68px, 0);
+  }
+  100% {
+    clip: rect(56px, 9999px, 1px, 0);
+  }
+}
+.js_glitch.on:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: var(--black);
+  background: var(--white);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(1px, 9999px, 32px, 0);
+  }
+  5% {
+    clip: rect(60px, 9999px, 82px, 0);
+  }
+  10% {
+    clip: rect(99px, 9999px, 54px, 0);
+  }
+  15% {
+    clip: rect(41px, 9999px, 79px, 0);
+  }
+  20% {
+    clip: rect(36px, 9999px, 73px, 0);
+  }
+  25% {
+    clip: rect(4px, 9999px, 61px, 0);
+  }
+  30% {
+    clip: rect(94px, 9999px, 71px, 0);
+  }
+  35% {
+    clip: rect(58px, 9999px, 20px, 0);
+  }
+  40% {
+    clip: rect(24px, 9999px, 64px, 0);
+  }
+  45% {
+    clip: rect(77px, 9999px, 60px, 0);
+  }
+  50% {
+    clip: rect(98px, 9999px, 45px, 0);
+  }
+  55% {
+    clip: rect(40px, 9999px, 27px, 0);
+  }
+  60% {
+    clip: rect(6px, 9999px, 94px, 0);
+  }
+  65% {
+    clip: rect(21px, 9999px, 90px, 0);
+  }
+  70% {
+    clip: rect(68px, 9999px, 22px, 0);
+  }
+  75% {
+    clip: rect(5px, 9999px, 57px, 0);
+  }
+  80% {
+    clip: rect(72px, 9999px, 44px, 0);
+  }
+  85% {
+    clip: rect(93px, 9999px, 2px, 0);
+  }
+  90% {
+    clip: rect(65px, 9999px, 49px, 0);
+  }
+  95% {
+    clip: rect(71px, 9999px, 4px, 0);
+  }
+  100% {
+    clip: rect(8px, 9999px, 63px, 0);
+  }
+}
+.glitch.on:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: var(--black);
+  background: var(--white);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+/* textflicker */
+@keyframes textflicker {
+  from {
+    text-shadow:
+      1px 0 0 #ea36af,
+      -2px 0 0 #75fa69;
+  }
+
+  to {
+    text-shadow:
+      2px 0.5px 2px #ea36af,
+      -1px -0.5px 2px #75fa69;
+  }
+}
+
+/* 下からフェードイン */
+.fadein {
+  animation: fadein 1.6s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+Gnav
+*/
+.Gnav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.Gnav_Inner {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .Gnav_Inner {
+    height: 100px;
+  }
+}
+
+.Gnav a {
+  transition: color 0.3s;
+}
+
+.Gnav a:hover {
+  transition: 0.3s;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.Gnav br {
+  display: none;
+}
+
+/* ハンバーガーメニュー */
+@media screen and (width < 768px) {
+  .Gnav ul {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 70px;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    right: -100%;
+    display: block;
+    transition: right 0.3s;
+    top: 0;
+    background-color: #141414f9;
+    z-index: 1;
+  }
+
+  .Gnav li {
+    margin-bottom: 35px;
+  }
+
+  .Gnav a {
+    display: block;
+    font-size: 39px;
+    font-weight: bold;
+    color: var(--white);
+    border-left: solid 7px var(--white);
+    padding-left: 10px;
+    line-height: 1;
+  }
+
+  .Gnav br {
+    display: block;
+  }
+
+  .Gnav a > span {
+    display: block;
+    font-size: 0.333333em;
+    font-weight: 400;
+    margin-top: 10px;
+    font-family: var(--font_ja);
+  }
+
+  .Gnav .Icon_R {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Gnav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 100%;
+  }
+
+  .Gnav li {
+    margin-right: 24px;
+  }
+
+  .Gnav a {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--black);
+    display: inline-flex;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid var(--black);
+  }
+
+  .Gnav span {
+    display: none;
+  }
+
+  .Gnav.White li a {
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+  }
+
+  .Gnav.White li .Icon_R {
+    filter: var(--svg_white);
+  }
+}
+
+.Gnav a .Icon_R {
+  margin-left: 1em;
+}
+
+/* ハンバーガボタン */
+.HamBtn {
+  position: relative;
+  background-color: transparent;
+  width: 40px;
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  height: 16px;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .HamBtn {
+    display: none;
+  }
+}
+
+/* 線 上*/
+.HamBtn::before {
+  content: "";
+  height: 3px;
+  width: 40px;
+  background-color: var(--black);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: 0.3s;
+  transform-origin: top left;
+}
+
+/* 線　下 */
+.HamBtn::after {
+  content: "";
+  transition: 0.3s;
+  height: 3px;
+  width: 40px;
+  background-color: var(--black);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform-origin: bottom left;
+}
+
+/*
+開く
+*/
+.Gnav.Open ul {
+  right: 0;
+}
+
+.HamBtn.Open::before {
+  transform: rotate(20deg);
+  background-color: var(--white);
+}
+
+.HamBtn.Open::after {
+  transform: rotate(-20deg);
+  background-color: var(--white);
+}
+
+/* ハンバーガーが開いているときと、背景が黒いときに色を白くする */
+.HamBtn.Open::before,
+.HamBtn.Open::after,
+.Gnav.White .HamBtn::before,
+.Gnav.White .HamBtn::after {
+  background-color: var(--white);
+}
+
+/*
+
+
+footer
+
+
+*/
+
+footer a {
+  color: var(--white);
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+/*
+
+
+Contact
+お問い合わせ
+
+*/
+.Sec_Contact {
+  background-color: var(--black);
+  color: var(--white);
+  padding-bottom: 24px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+/* スクロールで表示 */
+.Sec_Contact.show {
+  z-index: 2;
+  opacity: 1;
+}
+
+.Sec_Contact_Inner {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.Sec_Contact_Inner > div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .Sec_Contact_Inner {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+.Contact_Ttl {
+  text-align: center;
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ja */
+.Contact_Ttl div:first-child {
+  position: relative;
+  bottom: -0.7em;
+  font-size: 0.875rem;
+  line-height: 1.5714;
+  letter-spacing: 0.03em;
+  font-family: var(--font_ja);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  /* pc ja */
+  .Contact_Ttl div:first-child {
+    font-size: 1rem;
+  }
+}
+
+/* en */
+.Contact_Ttl div:last-child {
+  font-size: 2.1875rem;
+  letter-spacing: 0.01em;
+  line-height: 1.33;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  /* pc en */
+  .Contact_Ttl div:last-child {
+    font-size: 2.8125rem;
+  }
+}
+
+/* お問い合わせフォーム */
+@media screen and (min-width: 768px) {
+  .Contact_form {
+    display: flex;
+    grid-column-gap: 15px;
+    grid-row-gap: 8px;
+  }
+
+  .Contact_form_Top,
+  .Contact_form_Bottom {
+    width: 50%;
+  }
+}
+
+.Contact_form_Top > div,
+.Contact_form_Bottom {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  color: var(--white);
+  border: 0;
+  outline: 0;
+  background-color: #ffffff15;
+  margin-bottom: 8px;
+}
+
+.Contact_form_Bottom {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .Contact_form_Top > div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Contact_form dt {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: start;
+  color: var(--white);
+  letter-spacing: 0.025em;
+  line-height: 1.313rem;
+}
+
+.Contact_form label {
+  opacity: 0.5;
+}
+
+.Contact_form div input,
+.Contact_form div textarea {
+  width: 100%;
+  font-weight: 700;
+  padding: 11px 20px;
+  font-size: 0.875rem;
+}
+
+/* メッセージ欄 */
+.Contact_form > div.Contact_Form_Massage {
+  display: block;
+}
+
+.Contact_form > div.Contact_Form_Massage dt {
+  padding: 11px;
+  padding-left: 20px;
+}
+
+.Contact_form > div.Contact_Form_Massage dd {
+  height: 100%;
+}
+
+.Contact_form > div.Contact_Form_Massage textarea {
+  height: calc(100% - (1rem + 27px));
+  padding-top: 0;
+}
+
+/* 送信ボタン */
+.Contact_Btn_Wrap {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.Submit_Btn {
+  padding: 12px 16px;
+  background-color: var(--white);
+  color: var(--black);
+  width: 390px;
+  max-width: 100%;
+  font-size: 1.0625rem;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.Submit_Btn:hover {
+  transition: 0.3s;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* リンクリスト */
+.Footer_Gnav {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer_Gnav {
+    font-size: 1.5rem;
+  }
+}
+
+.Footer_Gnav ul {
+  margin: 66px auto 38px;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer_Gnav ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 77px;
+  }
+}
+
+.Footer_Gnav li {
+  border-bottom: 1px solid var(--gray);
+}
+
+.Footer_Corporate a,
+.Footer_Sns {
+  display: flex;
+  align-items: flex-end;
+}
+
+.Footer_Corporate a:hover,
+.Footer_Sns:hover {
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer_Corporate a,
+  .Footer_Sns {
+    display: inline-flex;
+  }
+}
+
+/* SNSリンク */
+.Footer_Sns {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer_Sns {
+    margin-bottom: 0;
+  }
+}
+
+.Footer_Sns a {
+  margin-bottom: 5px;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer_Sns a:nth-of-type(1) {
+    margin-left: 93px;
+  }
+}
+
+.Footer_Sns a:nth-of-type(2) {
+  margin-left: 16px;
+}
+
+/* SNSアイコン */
+.Footer_Sns .Icon_Sns {
+  height: 48px;
+  width: 48px;
+  max-height: 48px;
+  max-width: 48px;
+  min-height: 48px;
+  min-width: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer_Sns .Icon_Sns {
+    height: 38px;
+    width: 38px;
+    max-height: 38px;
+    max-width: 38px;
+    min-height: 38px;
+    min-width: 38px;
+  }
+}
+
+/* コーポレートリンク */
+.Footer_Corporate span {
+  margin-right: 62px;
+}
+
+.Footer_Corporate .Icon_R {
+  height: 28px;
+  width: 28px;
+  max-height: 28px;
+  max-width: 28px;
+  min-height: 28px;
+  min-width: 28px;
+  margin-bottom: 4px;
+  margin-left: auto;
+}
+
+/* コピーライト */
+.Copyright {
+  font-size: 10px;
+  font-family: "メイリオ", Meiryo;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .Copyright {
+    font-size: 0.875rem;
+  }
+}
+
+/*
+
+アニメーション
+
+*/
+
+/*----------------
+
+
+
+js  ローディング 
+
+
+
+-----------------*/
+
+/* ロード中body */
+body.loading {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+}
+
+body header {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+body.is_loaded header {
+  visibility: visible;
+  pointer-events: all;
+  opacity: 1;
+}
+
+/* ロード完了 */
+body.is_loaded {
+  position: static;
+}
+
+/*
+
+
+hero
+
+
+*/
+.Hero {
+  background-color: var(--white);
+}
+
+/* トップタイトル */
+.Hero_Ttl_Wrap {
+  height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.Hero_Ttl h1 div:nth-child(1) {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.Hero_Ttl h1 div:nth-child(2) {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.Hero_Ttl .Loader {
+  font-size: 13px;
+  font-weight: bold;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .Hero_Ttl h1 div:nth-child(1) {
+    font-size: 130px;
+  }
+
+  .Hero_Ttl h1 div:nth-child(2) {
+    font-size: 65px;
+  }
+
+  .Hero_Ttl .Loader {
+    font-size: 20px;
+  }
+}
+
+.Loader {
+  position: relative;
+}
+
+/* ロード中表示 */
+.Loader_Before {
+  width: 100%;
+  align-items: center;
+  display: flex;
+
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.1s;
+}
+
+/* ロード完了後非表示 */
+.Loader.is_loaded .Loader_Before {
+  opacity: 0;
+}
+
+.Loader_Before .Txt_Loading {
+  display: inline-block;
+  /* width: 64px; */
+  margin-right: 7px;
+}
+
+/*
+
+ロード後に表示
+
+ */
+.Loader .Loader_After {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.Loader.is_loaded .Loader_After {
+  opacity: 1;
+}
+
+/* 
+
+プログレスバー 
+
+*/
+.Loader_Progress_Wrap {
+  display: inline-block;
+  /* sp ロード中の全体長さ*/
+  width: calc(100% - 68px);
+  padding-left: 0.1em;
+}
+
+@media screen and (min-width: 768px) {
+  .Loader_Progress_Wrap {
+    /* pc ロード中の全体長さ*/
+    width: calc(100% - 102px);
+  }
+}
+
+.Loader_After .Loader_Progress_Wrap {
+  /* sp ロード後の全体長さ */
+  width: calc(100% - 76px);
+}
+
+@media screen and (min-width: 768px) {
+  .Loader_After .Loader_Progress_Wrap {
+    /* pc ロード中の全体長さ*/
+    width: calc(100% - 115px);
+  }
+}
+
+.loader_progress {
+  display: inline-block;
+  height: 5px;
+  width: 0%;
+  background-color: var(--black);
+  transition: width 0.4s;
+}
+
+.Loader_After .loader_progress {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .loader_progress {
+    height: 7px;
+  }
+}
+
+/*
+ アニメーション
+*/
+.anime_sticky {
+  position: sticky;
+  height: 100vh;
+  /* top: 130px; */
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+}
+
+/*
+section 01
+*/
+.Sec_01 {
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  /* transition: 1s; */
+}
+
+.Sec_01 .Shadow {
+  z-index: -1;
+  top: -0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Sec_02 .Shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.js_anime01_frame,
+.js_anime02_frame {
+  width: 100%;
+  position: relative;
+}
+
+.js_anime01_frame {
+  height: 100%;
+}
+
+.js_anime01_frame canvas,
+.js_anime02_frame canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.js_anime02_frame {
+  height: 100%;
+}
+/* 
+.js_anime02_frame canvas {
+  filter: drop-shadow(12px 12px 10px rgb(0 0 0 / 0.21));
+} */
+
+/*
+section 02
+*/
+.Sec_02 {
+  min-height: 100vh;
+  background-color: var(--white);
+  color: var(--black);
+  /* padding-bottom: 100px; */
+}
+
+/*
+section title
+*/
+.Sec_Ttl {
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  top: 6vh;
+}
+
+.Sec_Ttl div:first-child {
+  font-size: 75px;
+}
+
+.Sec_Ttl div:last-child {
+  font-size: 18px;
+}
+
+.js_sec_ttl,
+.js_sec_ttl2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.js_sec_ttl .text {
+  font-weight: bold;
+  font-size: 12vw;
+}

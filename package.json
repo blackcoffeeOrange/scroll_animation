@@ -1,0 +1,28 @@
+{
+  "name": "Git_New_AozorakojoHP",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://TanakaChikako@bitbucket.org/rararaia/xin-qing-kong-gong-chang.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/rararaia/xin-qing-kong-gong-chang#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
+    "javascript-obfuscator": "^4.1.1",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "shuffle-text": "^0.5.0"
+  }
+}
